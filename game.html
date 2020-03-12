@@ -1,0 +1,138 @@
+<!--Van Joseph P. Cabuga-->
+<html>
+	<head>
+		<title>BOXING!</title>
+	<script src="game.js">
+	</script>
+	<style>
+		body{
+			font-family:calibri;
+		}
+
+		#box1 {
+			width:125px;
+			height:40px;
+			background-color: grey;
+			color:white;
+			border-radius:15px;
+			font-size:20px;
+			color:white;
+			font-weight: bold;
+			text-align: center;
+			vertical-align: baseline;
+			padding-top:10px;
+		}
+
+		#btn {
+			border:none;
+			border-radius:15px;
+			font-size:15px;
+			transition:all .2s ease-in;
+			color:black;
+			font-weight: bold;
+		}
+
+		#btn.atk {
+			background-color: orange;
+		}
+
+		#btn.def {
+			background-color: #52C7FF;
+		}
+
+		#btn.atk:hover {
+			background-color: #C1461F;
+			font-size:20px;
+			color:white;
+			transition:all .2s ease-in;
+		}
+
+		#btn.def:hover{
+			background-color: #1F2DC1;
+			font-size:20px;
+			color:white;
+			transition:all .2s ease-in;
+		}
+
+		#start_text{
+			width:130px;
+		}
+
+		#start_text2{
+			width:130px;
+		}
+
+		.health{
+			background-color:green;
+			border-radius: 50px;
+			width:200px;
+			height:20px;
+		}
+
+		table{
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.comment{
+			overflow-y: hidden;
+			text-overflow: ellipsis;
+			height:500px;
+			width:inherit;
+			vertical-align:top;
+			white-space: nowrap;
+			
+		}
+
+		img{
+			transform: scaleX(-1);
+		}
+
+	</style>
+	</head>
+	<body>
+		<table width="750px">
+		<tr>
+			<td class="btn1">
+				<b>Champion Decides to:<b><br>
+				<button onclick="start()" id="btn" class="atk">
+					<p id="start_text">Start Game</p>
+				</button>
+				<button onclick="defend()" id="btn" class="def">
+					<p id="start_text2">Start Game</p>
+				</button>
+			</td>
+			<td>
+				<b>Challenger Decides to:</b><br>
+				<div id="box1">	Wait</div>
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td>
+				<progress class="health" id="champh" value="100" max="100" ></progress>
+				<p id="demop">Champion's Health: 100</p>
+			</td>
+			<td>
+				<progress class="health" id="aih" value="100" max="100"></progress>
+				<p id="trial">Challenger's Health: 100</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img src="source.gif" height="150px"/>
+			</td>
+			<td>
+				<img src="cc87848693f5d5123cad63f60f74eff4.gif" />
+			</td>
+		</tr>
+		<tr>
+			<td colspan= "2" >
+				<div class="comment">
+						<p><b>Commentator:</b></p>
+					<p id="for_me"></p>
+				</div>
+			</td>
+		</tr>
+	</table>
+	</body>
+</html>
